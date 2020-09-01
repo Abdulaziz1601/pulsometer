@@ -1,0 +1,15 @@
+.consultation {
+    min-height: 680px;
+    padding: 100px 0 92px;
+    background: url("../img/background/running_man_bg.jpg") center (center/cover) no-repeat;
+
+    &__descr {
+        margin-top: 80px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-family: 'Museo Sans Cyrl 500';
+        font-weight: 500;
+        color: #ffffff;
+    }
+
+}

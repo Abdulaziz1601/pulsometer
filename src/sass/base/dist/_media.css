@@ -1,0 +1,21 @@
+@media (max-width: 991px) {
+  .promo {
+    padding: 21px 20px 93px;
+  }
+  .promo__header {
+    font-size: 40px;
+  }
+  .promo__subheader {
+    font-size: 22px;
+  }
+
+  .header__logo {
+    width: 220px;
+  }
+  .header__official {
+    font-size: 11px;
+  }
+  .header__official span {
+    font-size: 17px;
+  }
+}
