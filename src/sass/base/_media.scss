@@ -36,7 +36,26 @@
             width: 220px;
         }
     }
+.carousel {
+    .tns-item {
+        img {
+            width: 600px;
+        }
+    }
+    .tns-nav {
+        margin-top: 20px;
+    }
+    .prev {
+        left: 50px
+    }
 
+    .next {
+
+        right: 50px;
+    }
+
+
+}
 }
 
 @media (max-width: 820px) {
@@ -114,6 +133,26 @@
             font-size: 18px;
         }
     }
+    
+.carousel {
+    .tns-item {
+        img {
+           
+            width: 600px;
+        }
+    }
+    .tns-nav {
+        margin-top: 20px;
+    }
+    .prev {
+        left: 50px
+    }
+
+    .next {
+
+        right: 50px;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -211,4 +250,5 @@
         }
         
     }
+}
 }
