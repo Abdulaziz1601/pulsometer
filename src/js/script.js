@@ -25,15 +25,8 @@ const slider = tns({
     controls: false,
     autoHeight: true,
     responsive: {
-      640: {
-        gutter: 20,
-        items: 1,
-       
-      },
-      700: {
-      },
-      900: {
-        items: 1,
+      600: {
+        controls:false
       }
     }
   });
