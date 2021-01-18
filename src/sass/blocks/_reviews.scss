@@ -1,0 +1,44 @@
+.reviews{
+    padding-bottom: 50px;
+    min-height: 920px;
+    color: #0D0D0D;
+    .title{
+    margin-bottom: 60px;
+    }
+   &__block{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    width: 910px;
+    margin-bottom: 60px;
+   }
+    &__user-photo  {
+        display: inline-block;
+        width: 169px;
+        height: 169px;
+    }
+    &__descr{
+        width: 680px;
+        display: flex;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: 300;
+        font-family: 'Museo Sans Cyrl 300';
+        font-size: 16px;
+        line-height: 24px;
+    }
+        &__user-name{
+            font-style: normal;
+            font-family: 'Museo Sans Cyrl 700';
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__marathon{
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 14px;
+            line-height: 22px;
+            color: #646464;
+            margin-bottom: 10px;
+        }
+}   
