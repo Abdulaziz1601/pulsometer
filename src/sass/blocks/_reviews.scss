@@ -12,6 +12,9 @@
     width: 910px;
     margin-bottom: 60px;
    }
+   &__block:last-child{
+    margin-bottom: 0;
+   }
     &__user-photo  {
         display: inline-block;
         width: 169px;
