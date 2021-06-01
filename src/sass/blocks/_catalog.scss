@@ -65,13 +65,10 @@
         padding: 20px 20px 26px 20px;
         overflow: hidden;
         margin-bottom: 20px;
+        margin-right: 20px;
         transition: 0.5s all;
-        &:nth-child(2n-1) {
-            margin-right: 10px;
-        }
-        
-        &:nth-child(2n) {
-            margin-left: 10px;
+        &:nth-child(3n) {
+            margin-right: 0;
         }
 
         &__img {
@@ -130,15 +127,19 @@
             text-transform: uppercase;
             transition: 0.5s all;
 
+
+
             &:hover {
                 color: $main-color;
             }
+
         }
 
         &__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
         }
 
         &__prices {
