@@ -1,30 +1,28 @@
 .reviews{
+    display: none;
     padding-bottom: 50px;
-    min-height: 920px;
     color: #0D0D0D;
     .title{
-    margin-bottom: 60px;
+        margin-bottom: 60px;
     }
    &__block{
     display: flex;
     align-items: top;
-    justify-content: space-between;
     width: 910px;
     margin-bottom: 60px;
    }
    &__block:last-child{
     margin-bottom: 0;
    }
-    &__user-photo  {
-        display: inline-block;
+    &__user-photo img {
         width: 169px;
         height: 169px;
     }
     &__descr{
         width: 680px;
+        margin-left: 40px;
         display: flex;
         flex-direction: column;
-        font-style: normal;
         font-weight: 300;
         font-family: 'Museo Sans Cyrl 300';
         font-size: 16px;
