@@ -1,6 +1,5 @@
 .catalog {
     padding-bottom: 100px;
-
     &__tabs {
         margin-top: 70px;
         list-style-type: none;
@@ -16,7 +15,6 @@
         height: 50px;
         border: 2px solid #d0d0d0;
         font-size: 18px;
-        font-family: 'Museo Sans Cyrl 500';
         font-weight: 500;
         text-transform: uppercase;
         color: #6b6b6b;
@@ -26,7 +24,6 @@
         margin: 0 5px;
         transition: 0.5s all;
         cursor: pointer;
-
         &:hover {
             box-shadow: 2px 2px 30px $main-color;
             border: none;
@@ -40,9 +37,7 @@
             color: #fff;
             background-color: $main-color;
             border: none;
-
         }
-
     }
 
     &__content {
@@ -50,11 +45,9 @@
         display: none;
         flex-wrap: wrap;
         transition: 0.5s all;
-
         &_active {
             display: flex;
             justify-content: center;
-
         }
     }
 
@@ -81,7 +74,6 @@
         &__subtitle {
             margin-top: 20px;
             font-size: 16px;
-            font-family: 'Museo Sans Cyrl 700';
             font-weight: 700;
             color: #0d0d0d;
             text-align: center;
@@ -91,7 +83,6 @@
             text-align: center;
             margin-top: 16px;
             font-size: 14px;
-            font-family: 'Museo Sans Cyrl 300';
             font-weight: 300;
             color: #0d0d0d;
         }
@@ -100,13 +91,11 @@
             display: block;
             margin-top: 17px;
             font-size: 14px;
-            font-family: 'Museo Sans Cyrl 500';
             font-weight: 500;
             text-decoration: underline;
             color: #c70101;
             text-align: center;
             text-transform: uppercase;
-
             &:hover {
                 color: $main-color;
             }
@@ -119,27 +108,21 @@
             transform: translateX(calc(-50% - 20px));
             display: block;
             font-size: 14px;
-            font-family: 'Museo Sans Cyrl 500';
             font-weight: 500;
             text-decoration: underline;
             color: $main-color;
             text-align: center;
             text-transform: uppercase;
             transition: 0.5s all;
-
-
-
             &:hover {
                 color: $main-color;
             }
-
         }
 
         &__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-
         }
 
         &__prices {
@@ -152,7 +135,6 @@
             text-decoration: line-through;
             font-size: 14px;
             line-height: 1.2;
-            font-family: 'Museo Sans Cyrl 300';
             font-weight: 300;
             color: #555555;
         }
@@ -160,7 +142,6 @@
         &__price {
             font-size: 20px;
             line-height: 1.2;
-            font-family: 'Museo Sans Cyrl 700';
             font-weight: 700;
             color: #050505;
         }
@@ -169,7 +150,6 @@
             display: flex;
             width: calc(200% + 40px);
             transition: 0.5s all;
-
         }
 
         &__content {
@@ -194,11 +174,9 @@
             padding-right: 20px;
             transition: 0.5 all;
             list-style-type: none;
-
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
-
             }
 
             li {
@@ -206,10 +184,8 @@
                 margin-bottom: 20px;
                 font-size: 14px;
                 line-height: 1.2;
-                font-family: 'Museo Sans Cyrl 300';
                 font-weight: 300;
                 color: #555555;
-
                 &::before {
                     content: '';
                     position: absolute;
@@ -218,11 +194,8 @@
                     width: 5px;
                     height: 5px;
                     background-color: $main-color;
-
                 }
-
             }
-
         }
     }
 
@@ -232,5 +205,4 @@
         margin-top: 19px;
         margin-bottom: 21px;
     }
-
 }
