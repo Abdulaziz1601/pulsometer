@@ -1,0 +1,65 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+    &__wrapper {
+        max-width: 382px;
+        margin: 40px auto;
+        position: relative;
+    }
+    &__close {
+        color: $main-color;
+        font-size: 35px;
+        line-height: 19px;
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 0;
+        right: -35px;
+        cursor: pointer;
+    }
+    &__content {
+        padding: 40px;
+        background-color: #F2F2F2;
+        text-align: center;
+        max-height: 80vh;
+        overflow-y: auto;
+        form {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-family: 'MuseoModerno';
+        font-weight: 700;
+        font-size: 19px;
+        color: #0D0D0D;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        margin-bottom: 26px;  
+        font-family: 'MuseoModerno';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        color: #0D0D0D;
+    }
+    .modal__input {
+        font-weight: 500;
+    }
+}
+
+.modal_buy {
+    display: block;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
