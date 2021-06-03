@@ -30,6 +30,7 @@
         text-align: center;
         max-height: 80vh;
         overflow-y: auto;
+        overflow-x: hidden;
         form {
             width: 100%;
         }
@@ -55,7 +56,7 @@
 }
 
 .modal_buy {
-    display: block;
+    display: none;
 }
 .show {
     display: block;
