@@ -124,4 +124,9 @@ $(document).ready(function () {
 	valiateForms('#consultation-form');
 	valiateForms('#consultation form');
 	valiateForms('#order form');
+
+	// masking phone number
+
+	$('input[name=phone]').mask("+7 (999) 999-99-99"); //!!! this plugin do not work with type=number or type=tel
+
 });
