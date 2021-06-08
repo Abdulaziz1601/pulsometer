@@ -81,4 +81,47 @@ $(document).ready(function () {
 		})
 	})
 
+	// form validation with validate jquery
+
+	// At all forms we are reusing .feed-form, all our forms are related to feed-form
+	// $('.feed-form').validate(); // it works with only one form, we have to write it like this
+	// to use it multiple times
+
+	// we have 3 forms
+	// $('#consultation-form').validate();
+	
+	// $('#order form').validate(); 
+
+	// We have to create function to DRY
+	function valiateForms(form) {
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2 
+				},
+				phone: "required",
+				email: {
+					required: true,
+					email: true,
+				},
+			},
+			messages: {
+				name: {
+					required:  "Пожалуйста введите свое имя",
+					minlength: jQuery.validator.format("Введите {0} символов")
+				},
+				phone: "Пожалуйста введите свое номер телефона",
+				email: {
+					required: "Пожалуйста введите свою почту",
+					email: "Неправильно введен адрес почты"
+				}
+			}
+		});
+	}
+
+	// Reusing one function to validate our three forms
+	valiateForms('#consultation-form');
+	valiateForms('#consultation form');
+	valiateForms('#order form');
 });
