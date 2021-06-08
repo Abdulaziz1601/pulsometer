@@ -17,78 +17,68 @@
 //     });
 // });
 const slider = tns({
-  container: '.carousel__inner',
-  items: 1,
-  slideBy: 'page',
-  autoplay: false,
-  navPosition: "bottom",
-  controls: false,
-  autoHeight: true,
-  responsive: {
-    600: {
-      controls: false
-    }
-  }
+	container: '.carousel__inner',
+	items: 1,
+	slideBy: 'page',
+	autoplay: false,
+	navPosition: "bottom",
+	controls: false,
+	autoHeight: true,
+	responsive: {
+	600: {
+		controls: false
+	}
+	}
 });
 
 document.querySelector('.prev').addEventListener('click', function () {
-  slider.goTo('prev');
+	slider.goTo('prev');
 });
 document.querySelector('.next').addEventListener('click', function () {
-  slider.goTo('next');
+	slider.goTo('next');
 });
 
 $(document).ready(function () {
-  $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
-    $(this)
-      .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
-      .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
-  });
- 
- 
-      function toggleSlide(item) {
-        $(item).each(function (i) {
-          $(this).on('click', function(e)
-          {
-            e.preventDefault();
-            $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-            $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-          });
-            });
-      }
-      toggleSlide('.catalog-item__link');
-      toggleSlide('.catalog-item__back');
-      // Modal
-	const modalTrigger = document.querySelectorAll('[data-buy]'),
-		modal = document.querySelector('.modal_buy');
-		function openModal() {
-			modal.classList.add('show');
-			modal.classList.remove('hide');
-			clearInterval(modalTimerID); // if modal is opened already, we close it
-		}
-		function closeModal() {
-			modal.classList.add('hide');
-			modal.classList.remove('show');
-			clearInterval(modalTimerID);
-		}
+	$('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
+		$(this)
+			.addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
+			.closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
+	});
 
-		modalTrigger.forEach(trigger => { // event listener for every modal opener trigger
-			trigger.addEventListener('click', openModal)
+	function toggleSlide(item) {
+		$(item).each(function (i) {
+			$(this).on('click', function(e) {
+				e.preventDefault();
+				$('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+				$('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+			});
 		});
+	}
 
-		modal.addEventListener('click', e => {
-			if(e.target === modal || e.target.getAttribute('data-close') == '') {
-				closeModal();
-			}
-		});
+	toggleSlide('.catalog-item__link');
+	toggleSlide('.catalog-item__back');
 
-		document.addEventListener('keydown', e => {
-			if(e.code === 'Escape' && e.target.classList.contains('show')) {
-				closeModal();
-			}
-		});
+	// Modal
 
-		const modalTimerID = setTimeout(openModal, 3000);
-w
+	$('[data-modal=consultation]').on('click', function() {
+		$('.overlay, #consultation').fadeIn('slow'); // to make our code laconic we can write like this <-
+	});
+
+	$('.modal__close').on('click', function() {
+		$('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+	})
+	
+	// for order 
+
+	// $('.button_mini').on('click', function() {
+	// 	$('.overlay, #order').fadeIn();
+	// })
+
+	$('.button_mini').each(function(i) {
+		$(this).on('click', function() {
+			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()) // eq finds an elem by its index
+			$('.overlay, #order').fadeIn();
+		})
+	})
 
 });
