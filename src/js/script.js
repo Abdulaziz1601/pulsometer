@@ -174,6 +174,13 @@ $(document).ready(function () {
 		} else {
 			$('.pageup').fadeOut();
 		}
+		// // animate__fadeInUp
+		// if ($(this).scrollTop() > 3100) { // if user already passed 1600px, then up btn will appear
+		// 	$('.reviews').addClass('animate__fadeInUp');
+		// } else {
+		// 	$('.reviews').removeClass('animate__fadeInUp');
+
+		// }
 	});
 
 	// smooth scroll, works with all scrolls
