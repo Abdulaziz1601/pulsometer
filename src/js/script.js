@@ -129,4 +129,26 @@ $(document).ready(function () {
 
 	$('input[name=phone]').mask("+7 (999) 999-99-99"); //!!! this plugin do not work with type=number or type=tel
 
+	// getting mails from clients, using ajax and php
+
+	// when smth is submitted, after validation 
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('slow');
+
+				// const timerId = setTimeout(() => {
+				// 	$('#thanks, .overlay').fadeOut();
+				// }, 5000);
+
+			$('form').trigger('reset');
+		});
+		return false
+	});
 });
