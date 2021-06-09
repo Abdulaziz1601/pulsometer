@@ -10,6 +10,7 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
+    transition: all .3s;
     &:after {
         content: "";
         position: absolute;
@@ -33,9 +34,6 @@
         }
     }
 
-    &:active {   
-        transform: translateY(-1px);
-    }
 
     &_main {
         margin-top: 67px;

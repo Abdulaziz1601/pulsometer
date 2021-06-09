@@ -152,18 +152,35 @@ $(document).ready(function () {
 		return false
 	});
 
-	// up scroll
-	const threeSectionsH = $('section.promo').height() + $('section.advantages').height() + $('section.consultation').height();
+	// // up scroll
+	// const threeSectionsH = $('section.promo').height() + $('section.advantages').height() + $('section.consultation').height();
 
-	function showUpByScroll() {	
-		console.log($(window).scrollTop());
-		if($(window).scrollTop() > threeSectionsH ) {
+	// function showUpByScroll() {	
+	// 	console.log($(window).scrollTop());
+	// 	if($(window).scrollTop() > threeSectionsH ) {
+	// 		$('.pageup').fadeIn();
+	// 	} else if($(window).scrollTop() < $('section.promo').height()) {
+	// 		$('.pageup').fadeOut();
+	// 	}
+	// }
+
+	// window.addEventListener('scroll', showUpByScroll);
+
+	// Smooth scroll and pageup
+
+	$(window).scroll(function() { // we add scroll event to window
+		if ($(this).scrollTop() > 1600) { // if user already passed 1600px, then up btn will appear
 			$('.pageup').fadeIn();
-		} else if($(window).scrollTop() < $('section.promo').height()) {
+		} else {
 			$('.pageup').fadeOut();
 		}
-	}
+	});
 
-	window.addEventListener('scroll', showUpByScroll);
-	
+	// smooth scroll, works with all scrolls
+	$("a[href^='#']").click(function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});	
+
 });
