@@ -151,4 +151,19 @@ $(document).ready(function () {
 		});
 		return false
 	});
+
+	// up scroll
+	const threeSectionsH = $('section.promo').height() + $('section.advantages').height() + $('section.consultation').height();
+
+	function showUpByScroll() {	
+		console.log($(window).scrollTop());
+		if($(window).scrollTop() > threeSectionsH ) {
+			$('.pageup').fadeIn();
+		} else if($(window).scrollTop() < $('section.promo').height()) {
+			$('.pageup').fadeOut();
+		}
+	}
+
+	window.addEventListener('scroll', showUpByScroll);
+	
 });
